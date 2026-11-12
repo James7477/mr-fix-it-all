@@ -118,6 +118,24 @@ html.tabbed-site .hero{min-height:0}
 @media(max-width:980px){.brand-logo-art{width:84px;max-height:56px}}
 @media(max-width:420px){.brand-logo-art{width:65px;max-height:48px}.logo-type strong{font-size:16px}.logo-type small{font-size:9px}}
 
+
+/* V4.2 - business downloads on Home tab */
+.business-tools{padding:28px 0 34px;background:linear-gradient(155deg,#051522,#0b304b 46%,#061421);border-top:2px solid rgba(54,218,255,.55);border-bottom:2px solid rgba(54,218,255,.24)}
+.business-tools-heading{max-width:690px;margin:0 0 18px}
+.business-tools-heading h2{margin:7px 0 8px;font-size:clamp(25px,4vw,38px);line-height:1.1;font-weight:1000}
+.business-tools-heading h2 em{font-style:normal;color:#24d4ff}
+.business-tools-heading p{margin:0;color:#c0d7e4;font-size:13px;line-height:1.6}
+.business-tools-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.business-tool-card{display:flex;align-items:center;gap:14px;min-width:0;min-height:113px;padding:18px 15px;text-decoration:none;border:1px solid #2581aa;border-radius:16px;background:linear-gradient(160deg,#16415d,#051a2d);box-shadow:0 6px 22px #00121e88;transition:transform .15s,border-color .15s}
+.business-tool-card:hover,.business-tool-card:focus-visible{transform:translateY(-2px);border-color:#65dfff}
+.business-tool-card img{width:105px;max-width:39%;height:auto;flex:0 0 auto}
+.business-tool-icon{font-size:44px;color:#45dfff;min-width:53px;text-align:center;font-weight:1000}
+.business-tool-copy{display:flex;flex-direction:column;gap:6px;min-width:0}
+.business-tool-copy strong{color:#fff;font-size:14px;font-weight:950;letter-spacing:.04em}
+.business-tool-copy small{color:#b7d4e7;font-size:11px;line-height:1.45}
+.business-tool-copy b{color:#4be0ff;font-size:11px;letter-spacing:.06em}
+.business-tools-notice{margin:13px 0 0;color:#a2c2d1;font-size:10px;line-height:1.5}
+@media(max-width:860px){.business-tools-grid{grid-template-columns:1fr}.business-tool-card{min-height:90px}.business-tool-card img{max-width:105px}.business-tools{padding:22px 0 25px}}
 </style>
 
 </head>
@@ -157,6 +175,28 @@ html.tabbed-site .hero{min-height:0}
 <div class="mini-points"><span>✓ LOCAL SERVICE</span><span>✓ HONEST PRICING</span><span>✓ QUALITY WORK</span></div></div>
 <div class="hero-stage" aria-label="Mr. Fix It All technician and home appliances"><div class="electric-ring" aria-hidden="true"></div><img class="hero-person" src="assets/technician.webp" alt="Mr. Fix It All technician in branded work shirt" width="545" height="630" fetchpriority="high"><img class="hero-machines" src="assets/appliances.webp" alt="Stainless refrigerator, stove, washer and dryer" width="629" height="335"><div class="tech-tag"><span class="tech-tag-icon">✦</span><span><strong>MR. FIX IT ALL</strong><small>REPAIR SERVICES</small></span></div><div class="hero-location">📍 <span>BALDWIN &amp; ESCAMBIA<br><b>COUNTY AREA</b></span></div></div>
 </div><div class="hero-rim" aria-hidden="true"></div></section>
+
+<section class="business-tools" data-page="home" id="business-tools" aria-labelledby="business-tools-title">
+ <div class="container">
+  <div class="business-tools-heading">
+   <span class="eyebrow">PRINTABLE BUSINESS FILES</span>
+   <h2 id="business-tools-title">BUSINESS <em>DOWNLOADS</em></h2>
+   <p>Quick access to the blank invoice, printable business card, and logo artwork for shirts, signs and marketing.</p>
+  </div>
+  <div class="business-tools-grid">
+   <a class="business-tool-card" href="invoice.html" aria-label="Open editable invoice template">
+    <span class="business-tool-icon" aria-hidden="true">🧾</span><span class="business-tool-copy"><strong>INVOICE TEMPLATE</strong><small>Fill out charges • Print / Save PDF</small><b>OPEN INVOICE ↗</b></span>
+   </a>
+   <a class="business-tool-card" href="business-card.html" aria-label="Open printable business card">
+    <span class="business-tool-icon" aria-hidden="true">▣</span><span class="business-tool-copy"><strong>BUSINESS CARD</strong><small>Technician, appliances, website QR code</small><b>PRINT BUSINESS CARD ↗</b></span>
+   </a>
+   <a class="business-tool-card" href="assets/mr-fix-it-all-logo.svg" download aria-label="Download vector SVG logo for shirts and signs">
+    <img src="assets/mr-fix-it-all-logo.svg" alt="" loading="lazy" decoding="async" width="155" height="60"><span class="business-tool-copy"><strong>DOWNLOAD LOGO</strong><small>Scalable SVG artwork for shirts &amp; signs</small><b>SAVE LOGO ↓</b></span>
+   </a>
+  </div>
+  <p class="business-tools-notice">These blank templates and branding files are visible to anyone visiting this public site. Completed invoices should be stored privately, not posted here.</p>
+ </div>
+</section>
 <section class="quick-strip" data-page="home" aria-label="Services at a glance"><div class="container strip-content"><span><b>⚡</b> FAST SERVICE</span><span><b>✦</b> QUALITY WORK</span><span><b>◇</b> HONEST PRICING</span><span><b>⌖</b> LOCAL &amp; RELIABLE</span></div></section>
 
 <section class="about-section" data-page="about" id="about"><div class="container about-grid">
