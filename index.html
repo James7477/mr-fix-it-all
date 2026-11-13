@@ -136,6 +136,28 @@ html.tabbed-site .hero{min-height:0}
 .business-tool-copy b{color:#4be0ff;font-size:11px;letter-spacing:.06em}
 .business-tools-notice{margin:13px 0 0;color:#a2c2d1;font-size:10px;line-height:1.5}
 @media(max-width:860px){.business-tools-grid{grid-template-columns:1fr}.business-tool-card{min-height:90px}.business-tool-card img{max-width:105px}.business-tools{padding:22px 0 25px}}
+
+/* V4.3 — technician and appliances are the single top banner on EVERY tab.
+   Keep existing asset files, rather than embedding heavy artwork in HTML. */
+.site-showcase{position:relative;overflow:hidden;isolation:isolate;background:radial-gradient(ellipse at 49% 92%,rgba(0,160,247,.27),transparent 65%),linear-gradient(135deg,#040e1d,#072943 55%,#06101d);border-bottom:1px solid rgba(59,211,254,.38)}
+.site-showcase-inner{position:relative;display:flex;align-items:flex-end;justify-content:center;width:min(100%,1200px);height:clamp(190px,28vw,350px);margin:auto;padding:12px 18px 0}
+.site-showcase-halo{position:absolute;z-index:0;bottom:-58%;width:78%;aspect-ratio:1;border-radius:50%;border:2px solid rgba(33,194,255,.22);box-shadow:0 0 56px rgba(0,145,255,.22),inset 0 0 65px rgba(0,145,255,.12)}
+.site-showcase-person{position:relative;z-index:2;display:block;align-self:flex-end;width:auto;height:100%;max-width:42%;object-fit:contain;object-position:bottom center;filter:drop-shadow(0 14px 17px rgba(0,0,0,.55))}
+.site-showcase-appliances{position:relative;z-index:1;display:block;align-self:flex-end;width:54%;height:auto;max-height:85%;object-fit:contain;object-position:bottom center;margin-left:-4%;filter:drop-shadow(0 9px 15px rgba(0,0,0,.5))}
+.site-showcase-brand{position:absolute;z-index:4;top:10px;right:12px;display:block;width:clamp(135px,22vw,265px);height:auto;max-height:86px;filter:drop-shadow(0 4px 10px rgba(0,0,0,.85))}
+html.tabbed-site .page-tabs{top:0!important;position:sticky}
+.home-fast-actions{padding:22px 0 6px;background:#071624}
+.home-fast-actions-inner{display:flex;flex-wrap:wrap;justify-content:center;gap:12px}
+.home-fast-actions .btn{min-height:49px;min-width:min(100%,235px);display:inline-flex;align-items:center;justify-content:center;text-align:center;font-size:12px}
+@media(max-width:680px){
+ .site-showcase-inner{height:clamp(170px,48vw,225px);padding:9px 4px 0;justify-content:flex-start}
+ .site-showcase-person{height:98%;max-width:47%;margin-left:0}
+ .site-showcase-appliances{width:68%;max-height:73%;margin-left:-9%}
+ .site-showcase-brand{top:6px;right:6px;width:138px;max-height:49px}
+ .home-fast-actions{padding:14px 0 0}
+ .home-fast-actions-inner{gap:8px}
+ .home-fast-actions .btn{flex:1 1 130px;min-width:0;padding:11px 9px;font-size:10px;letter-spacing:0}
+}
 </style>
 
 </head>
@@ -152,13 +174,14 @@ html.tabbed-site .hero{min-height:0}
 <symbol id="icon-oven" viewBox="0 0 120 120"><rect x="13" y="13" width="94" height="94" rx="7" fill="url(#steel)" stroke="#ebfbff" stroke-width="3"/><rect x="20" y="23" width="80" height="22" rx="3" fill="#0a2438"/><circle cx="34" cy="33" r="5" fill="#90dcff"/><circle cx="50" cy="33" r="5" fill="#90dcff"/><circle cx="66" cy="33" r="5" fill="#90dcff"/><rect x="23" y="50" width="74" height="49" rx="3" fill="#091624" stroke="#bad0db" stroke-width="3"/><path d="M34 85h50M40 72h38" stroke="#ff8c3a" stroke-width="3"/><path d="M48 89Q38 77 52 65M65 90Q55 79 69 66" stroke="#ffac45" stroke-width="4" fill="none"/></symbol>
 <symbol id="icon-cooktop" viewBox="0 0 120 120"><path d="m25 16 79 32v50L25 70z" fill="url(#steel)" stroke="#e8f8ff" stroke-width="4" stroke-linejoin="round"/><path d="M14 30 91 14l13 34-79 16z" fill="#091928" stroke="#d9f5ff" stroke-width="4"/><ellipse cx="49" cy="38" rx="15" ry="8" fill="none" stroke="#4bcfff" stroke-width="4"/><ellipse cx="80" cy="30" rx="9" ry="5" fill="none" stroke="#4bcfff" stroke-width="3"/><ellipse cx="67" cy="51" rx="9" ry="4" fill="none" stroke="#4bcfff" stroke-width="3"/><circle cx="47" cy="80" r="4" fill="#0c3349"/><circle cx="65" cy="87" r="4" fill="#0c3349"/><circle cx="83" cy="94" r="4" fill="#0c3349"/></symbol>
 </defs></svg>
-<div class="announcement"><span class="announcement-live" aria-hidden="true"></span> LOCAL APPLIANCE REPAIR <span class="announcement-divider">/</span> BALDWIN &amp; ESCAMBIA COUNTY AREA <a href="tel:+12513850752">CALL 251-385-0752 <span>↗</span></a></div>
-<header class="header" id="top"><div class="container header-inner">
-<a class="logo" href="#top" aria-label="Mr. Fix It All home"><img class="brand-logo-art" src="assets/mr-fix-it-all-logo.svg" alt="" width="184" height="62" decoding="async"><span class="logo-type"><strong>MR. FIX IT ALL</strong><small>REPAIR SERVICES</small></span></a>
-<nav class="nav" id="mainNav" aria-label="Main navigation"><a href="#services">SERVICES</a><a href="#schedule" class="nav-feature">SCHEDULE</a><a href="#resources">Q&amp;A</a><a href="#about">ABOUT</a><a href="#specials">SPECIALS</a><a href="#contact">CONTACT</a></nav>
-<a class="header-call" href="tel:+12513850752"><span class="call-dot">☎</span> CALL NOW</a>
-<button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-controls="mainNav" aria-expanded="false"><span></span><span></span><span></span></button>
-</div></header>
+<section class="site-showcase" id="top" aria-label="Mr. Fix It All technician and appliance artwork">
+  <div class="site-showcase-inner">
+    <div class="site-showcase-halo" aria-hidden="true"></div>
+    <img class="site-showcase-person" src="assets/technician.webp" width="545" height="630" fetchpriority="high" decoding="async" alt="Mr. Fix It All technician">
+    <img class="site-showcase-appliances" src="assets/appliances.webp" width="629" height="335" fetchpriority="high" decoding="async" alt="Refrigerator, stove, washer and dryer">
+    <img class="site-showcase-brand" src="assets/mr-fix-it-all-logo.svg" width="200" height="68" decoding="async" alt="Mr. Fix It All Repair Services">
+  </div>
+</section>
 <nav class="page-tabs" id="pageTabs" aria-label="Website pages — swipe for more">
   <button type="button" class="page-tab is-active" data-tab="home" aria-current="page"><span class="tab-glyph" aria-hidden="true">⌂</span><span>HOME</span></button>
   <button type="button" class="page-tab" data-tab="services"><span class="tab-glyph" aria-hidden="true">⚙</span><span>SERVICES</span></button>
@@ -169,13 +192,12 @@ html.tabbed-site .hero{min-height:0}
   <button type="button" class="page-tab" data-tab="contact"><span class="tab-glyph" aria-hidden="true">☎</span><span>CONTACT</span></button>
 </nav>
 <main id="main">
-<section class="hero" data-page="home"><div class="hero-mesh" aria-hidden="true"></div><div class="container hero-wrap">
-<div class="hero-copy"><div class="slanted-label"><span class="sparkle">✦</span> YOUR LOCAL APPLIANCE REPAIR CREW</div><h1>YOUR APPLIANCE<br>ACTING UP?<br><span>WE FIX THAT.</span></h1><p>Washers, dryers, ovens, dishwashers and more. <strong>Mr. Fix It All Repair Services</strong> is ready to hear what's going wrong.</p>
-<div class="hero-buttons"><a class="btn btn-cyan" href="#schedule"><span class="btn-icon">◷</span> REQUEST A SERVICE CALL</a><a class="btn btn-line" href="tel:+12513850752"><span class="btn-icon">☎</span> CALL US</a></div>
-<div class="mini-points"><span>✓ LOCAL SERVICE</span><span>✓ HONEST PRICING</span><span>✓ QUALITY WORK</span></div></div>
-<div class="hero-stage" aria-label="Mr. Fix It All technician and home appliances"><div class="electric-ring" aria-hidden="true"></div><img class="hero-person" src="assets/technician.webp" alt="Mr. Fix It All technician in branded work shirt" width="545" height="630" fetchpriority="high"><img class="hero-machines" src="assets/appliances.webp" alt="Stainless refrigerator, stove, washer and dryer" width="629" height="335"><div class="tech-tag"><span class="tech-tag-icon">✦</span><span><strong>MR. FIX IT ALL</strong><small>REPAIR SERVICES</small></span></div><div class="hero-location">📍 <span>BALDWIN &amp; ESCAMBIA<br><b>COUNTY AREA</b></span></div></div>
-</div><div class="hero-rim" aria-hidden="true"></div></section>
-
+<section class="home-fast-actions" data-page="home" aria-label="Quick service contact">
+ <div class="container home-fast-actions-inner">
+  <a class="btn btn-cyan" href="#schedule">◷ REQUEST A SERVICE CALL</a>
+  <a class="btn btn-line" href="tel:+12513850752">☎ CALL 251-385-0752</a>
+ </div>
+</section>
 <section class="business-tools" data-page="home" id="business-tools" aria-labelledby="business-tools-title">
  <div class="container">
   <div class="business-tools-heading">
