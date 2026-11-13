@@ -158,6 +158,52 @@ html.tabbed-site .page-tabs{top:0!important;position:sticky}
  .home-fast-actions-inner{gap:8px}
  .home-fast-actions .btn{flex:1 1 130px;min-width:0;padding:11px 9px;font-size:10px;letter-spacing:0}
 }
+
+/* V4.4 — on every tab, keep the shared technician/appliance banner at the top.
+   Remove only redundant large introductory copy; preserve real content/forms. */
+html.tabbed-site [data-page="services"] > .container > .section-head,
+html.tabbed-site [data-page="specials"] > .container > .section-head,
+html.tabbed-site [data-page="schedule"] > .container > .section-head,
+html.tabbed-site [data-page="resources"] > .container > .resources-title{
+  display:none!important;
+}
+html.tabbed-site [data-page="about"] .about-art,
+html.tabbed-site [data-page="about"] .about-brand-logo,
+html.tabbed-site [data-page="about"] .about-content > .eyebrow,
+html.tabbed-site [data-page="about"] .about-content > h2,
+html.tabbed-site [data-page="about"] .about-content > p:first-of-type,
+html.tabbed-site [data-page="about"] .area-copy > .eyebrow,
+html.tabbed-site [data-page="about"] .area-copy > h2,
+html.tabbed-site [data-page="contact"] .contact-inner > .eyebrow,
+html.tabbed-site [data-page="contact"] .contact-inner > h2,
+html.tabbed-site [data-page="contact"] .contact-inner > p:not(.contact-small){
+  display:none!important;
+}
+html.tabbed-site .about-grid{grid-template-columns:minmax(0,1fr);max-width:870px;gap:0}
+html.tabbed-site .about-content{width:100%}
+html.tabbed-site .about-content > p{margin-top:0}
+html.tabbed-site .about-section,
+html.tabbed-site .schedule-section,
+html.tabbed-site .resources-section{padding-top:24px}
+html.tabbed-site .section.services,
+html.tabbed-site .section.specials{padding-top:25px}
+html.tabbed-site .services .service-gallery{margin-top:0}
+html.tabbed-site .specials .promo-grid{margin-top:15px}
+html.tabbed-site .resources-section .resource-tools{margin-top:0}
+html.tabbed-site .area{padding-top:28px}
+html.tabbed-site .area-copy > p{margin-top:0}
+html.tabbed-site .contact{padding-top:30px}
+html.tabbed-site .contact .giant-phone{margin-top:8px;font-size:clamp(38px,8vw,100px)}
+@media(max-width:680px){
+ html.tabbed-site .about-section,
+ html.tabbed-site .schedule-section,
+ html.tabbed-site .resources-section,
+ html.tabbed-site .section.services,
+ html.tabbed-site .section.specials{padding-top:18px}
+ html.tabbed-site .contact{padding-top:20px}
+ html.tabbed-site .specials .promo-grid{margin-top:8px}
+ html.tabbed-site .area{padding-top:22px}
+}
 </style>
 
 </head>
